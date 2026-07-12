@@ -7,7 +7,7 @@
 //
 //     const fetchInvoices = async () => {
 //         try {
-//             const response = await fetch('http://localhost:8080/api/invoices');
+//             const response = await fetch('https://ledgerflow-backend-utt2.onrender.com/api/invoices');
 //             const data = await response.json();
 //             setInvoices(data);
 //         } catch (err) {
@@ -24,7 +24,7 @@
 //         setError(null);
 //
 //         try {
-//             const res = await fetch(`http://localhost:8080/api/invoices/${id}/pay?amountInCents=${remainingAmount}&webhookId=${webhookId}`, {method: 'POST'});
+//             const res = await fetch(`https://ledgerflow-backend-utt2.onrender.com/api/invoices/${id}/pay?amountInCents=${remainingAmount}&webhookId=${webhookId}`, {method: 'POST'});
 //             if (!res.ok) throw new Error("Payment failed. Possible concurrency conflict or overpayment.");
 //             fetchInvoices();
 //         } catch (err) {
@@ -85,7 +85,7 @@ function App() {
     const fetchInvoices = async () => {
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:8080/api/invoices');
+            const response = await fetch('https://ledgerflow-backend-utt2.onrender.com/api/invoices');
             if (!response.ok) throw new Error("Backend not reachable");
             const data = await response.json();
             setInvoices(data);
@@ -106,7 +106,7 @@ function App() {
         setError(null);
 
         try {
-            const res = await fetch(`http://localhost:8080/api/invoices/${id}/pay?amountInCents=${remainingAmount}&webhookId=${webhookId}`, { method: 'POST' });
+            const res = await fetch(`https://ledgerflow-backend-utt2.onrender.com/api/invoices/${id}/pay?amountInCents=${remainingAmount}&webhookId=${webhookId}`, { method: 'POST' });
             if (!res.ok) throw new Error("Payment failed. Possible concurrency conflict or overpayment.");
             fetchInvoices();
         } catch (err) {
