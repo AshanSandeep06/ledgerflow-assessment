@@ -150,7 +150,7 @@ function App() {
         <div className="app-container">
             <header className="dashboard-header">
                 <div>
-                  <h2>Accounts Payable</h2>
+                  <h2 style="color: black;">Accounts Payable</h2>
                     <p className="subtitle">Manage and pay your outstanding invoices</p>
                 </div>
               <button id="refreshBtn" className="btn-secondary" onClick={fetchInvoices}>Refresh Data</button>
