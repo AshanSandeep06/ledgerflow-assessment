@@ -153,7 +153,7 @@ function App() {
                   <h1>Accounts Payable</h1>
                     <p className="subtitle">Manage and pay your outstanding invoices</p>
                 </div>
-                <button id="refreshBtn" className="btn-secondary" onClick={fetchInvoices}>Refresh Data</button>
+                <button className="btn-secondary" onClick={fetchInvoices}>Refresh Data</button>
             </header>
 
             {error && (
